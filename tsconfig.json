@@ -9,6 +9,6 @@
     "forceConsistentCasingInFileNames": true,
     "noEmitOnError": false
   },
-  "include": ["*.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["node_modules"]
 }

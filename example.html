@@ -3,59 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Corner Rush</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      body {
-        background: radial-gradient(1200px 700px at 20% -10%, #1e293b 0%, #020617 58%, #000 100%);
-      }
-
-      #hudPanel {
-        transition: box-shadow 0.3s ease, border-color 0.3s ease;
-      }
-
-      #hudPanel.is-won {
-        border-color: rgba(251, 191, 36, 0.8);
-        box-shadow: 0 0 25px rgba(251, 191, 36, 0.35);
-      }
-
-      #hudPanel.is-over {
-        border-color: rgba(251, 113, 133, 0.8);
-        box-shadow: 0 0 25px rgba(251, 113, 133, 0.3);
-      }
-
-      #gameCanvas {
-        image-rendering: auto;
-      }
-    </style>
+    <title>Game Framework Example</title>
   </head>
-  <body class="text-slate-100 flex flex-col justify-center items-center min-h-screen p-6">
-    <div
-      id="hudPanel"
-      class="is-running w-full max-w-4xl mb-6 rounded-2xl border border-slate-700/70 bg-slate-900/70 backdrop-blur px-6 py-4"
-    >
-      <div class="flex flex-wrap items-center justify-between gap-3">
-        <div>
-          <h1 class="text-4xl font-extrabold tracking-tight text-slate-100">Corner Rush</h1>
-          <p class="text-slate-300 text-sm md:text-base">Hit the glowing corner. Misses break your streak.</p>
-        </div>
-        <div class="text-right">
-          <p id="status" class="text-amber-300 font-semibold">Hit the glowing corner</p>
-          <p class="text-slate-400 text-sm">Controls: ←/→ or A/D, Space pause, R restart</p>
-        </div>
-      </div>
-
-      <div class="grid grid-cols-2 md:grid-cols-6 gap-3 mt-4 text-sm md:text-base">
-        <div class="rounded-lg bg-slate-800/70 px-3 py-2"><span class="text-slate-400">Score</span><div id="score" class="font-bold text-xl text-amber-300">0</div></div>
-        <div class="rounded-lg bg-slate-800/70 px-3 py-2"><span class="text-slate-400">Best</span><div id="best" class="font-bold text-xl text-fuchsia-300">0</div></div>
-        <div class="rounded-lg bg-slate-800/70 px-3 py-2"><span class="text-slate-400">Streak</span><div id="streak" class="font-bold text-xl text-emerald-300">0</div></div>
-        <div class="rounded-lg bg-slate-800/70 px-3 py-2"><span class="text-slate-400">Level</span><div id="level" class="font-bold text-xl text-cyan-300">1</div></div>
-        <div class="rounded-lg bg-slate-800/70 px-3 py-2"><span class="text-slate-400">Timer</span><div id="timer" class="font-bold text-xl text-rose-300">45.0</div></div>
-        <div class="rounded-lg bg-slate-800/70 px-3 py-2"><span class="text-slate-400">Target</span><div id="target" class="font-bold text-xl text-yellow-300">Top Left</div></div>
-      </div>
-    </div>
-
-    <canvas id="gameCanvas" class="rounded-xl shadow-2xl ring-1 ring-slate-600/40"></canvas>
+  <body>
+    <canvas id="gameCanvas" style="border: 1px solid #000000"></canvas>
 
     <script type="module" src="MyGame.js"></script>
   </body>
