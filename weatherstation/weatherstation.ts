@@ -1,4 +1,6 @@
-class WeatherStation implements Subject {
+import { Observer, Subject } from './observer';
+
+export class WeatherStation implements Subject {
   private observers: Observer[] = [];
 
   private temp = 0;
@@ -27,3 +29,5 @@ class WeatherStation implements Subject {
     this.notify();
   }
 }
+
+export default WeatherStation;
